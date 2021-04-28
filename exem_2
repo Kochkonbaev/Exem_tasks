@@ -1,0 +1,14 @@
+def calc(summa, rate, month):
+    if (month == 0):
+        return summa
+    return calc(summa,rate,month-1)*(1+rate/(12*100))
+
+
+summa_user = float(input("Enter the principal amount: "))
+rate_user = float(input("Enter the interest rate: "))
+time_user = float(input("Enter the time in months: "))
+
+amount = calc(summa_user, rate_user, time_user)
+interest = amount - summa_user
+print("Compound amount is %.2f" % amount)
+print("Compound interest is %.2f" % interest)
