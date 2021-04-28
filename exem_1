@@ -39,3 +39,4 @@ def func(x, y=5):
 		return x + y
 x = func('Jaguar ', 'hunter')
 # x = строки
+
