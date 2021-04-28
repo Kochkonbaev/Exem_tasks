@@ -1,0 +1,23 @@
+def func(lst):
+    lst.insert(0, 'Element')
+    lst.insert(1, 'Start')
+    lst.append('Finish')
+    return lst
+print(func([1, 2, 3, "q"]))
+
+
+def func(*args):
+    dic = {}
+    for i in range(1, len(args) + 1):
+        dic[args[i-1]] = i
+    return dic
+print(func('1', '2', '4', 'hello'))
+
+def func(tpl):
+    lst = list(tpl)
+    list_even = list(filter(lambda x: x % 2 == 0, lst))
+    list_square = list(map(lambda x: x**2, lst))
+    return list_even, list_square
+a, b = func((1,2,3,4,5,6,7,8,9,10))
+print(a)
+print(b)
